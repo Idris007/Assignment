@@ -1,0 +1,23 @@
+class bank_customers():
+    def __init__(self, firstname, lastname):
+        self.firstname = firstname
+        self.lastname = lastname
+    def state(self, state, region):
+        return f'{self.firstname} {self.lastname} is from {state} state {region} of Nigeria.'
+class bank_account():
+    def __init__(self, customer, balance):
+        self.customer = customer
+        self.balance = balance
+    def account_type(self, type):
+        return f'{self.customer} has a {type} account with {self.balance} balance. '
+
+firstname = input('Enter firstname')
+lastname = input('Enter lastname')
+customer = f'{firstname} {lastname}'
+balance = 40000
+
+name1 = bank_customers(firstname, lastname)
+name2 = bank_customers(firstname, lastname)
+name3 = bank_account(customer, balance)
+
+print(name3.account_type('savings'))
